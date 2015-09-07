@@ -14,9 +14,7 @@ void setup() {
 
 void loop() {
 
- char a = 'a';
- lcdDisplay(a,3);
- 
+
 }
 
 
