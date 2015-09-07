@@ -6,7 +6,7 @@ String lcdCharacters[65] = {"0","1","2","3","4","5","6","7","8","9",
 						"L","M","N","O","P","Q","R","S","T","U","V",
 						"W","X","Y","Z","a","b","c","d","e","f","g",
 						"h","i","j","k","l","m","n","o","p","q","r",
-						"s","t","u","v","w","x","y","z", "", "-", "_"};
+						"s","t","u","v","w","x","y","z", " ", "-", "_"};
 int characterCodes[65] = {192,249,164,176,153,146,130,248,128,144,136,
 						128,198,192,134,142,194,137,249,225,137,199,171,
 						171,192,140,144,136,146,135,193,193,227,137,145,
@@ -27,7 +27,7 @@ void setup() {
 }
 
 void loop() {
-	lcdDisplay15("1234567891234567", 1100);
+	lcdDisplay15("Hello World", 1100);
 	delay(500);
 }
 
@@ -41,10 +41,10 @@ void lcdDisplay15(String text, unsigned long textSpeed) {
 	text.toCharArray(textChar, textLength+1);
 
 	for(byte i=textLength;i<19;i++) {
-		textChar[i] = '\0';
+		textChar[i] = ' ';
 	}
 
-	int convertedChar[textLength];
+	int convertedChar[textLength+4];
 	for(byte i=0;i<textLength+4;i++) {
 		convertedChar[i] = findCharacterCode(textChar[i]);
 	}
