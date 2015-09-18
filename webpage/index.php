@@ -32,7 +32,7 @@ https://github.com/panosmz/arduinoledtest
         <div id="app">
             <header>
                 <div id="header-left">
-                    <h1><a href="http://83.212.118.5:86/">Arduino_App</a></h1>
+                    <h1><a href="#">Arduino_App</a></h1>
                     <p>A simple app, that displays the submitted text to a connected Arduino UNO.</p>
                 </div>
                 <div id="header-right">
