@@ -14,7 +14,6 @@ int characterCodes[65] = {192,249,164,176,153,146,130,248,128,144,136,
 						199,171,171,163,140,144,206,146,135,227,227,227,
 						137,145,164,255,191,247};
 
-//unsigned long time_since_last_reset = 0;
 
 void setup() {
   //Setting lcd pins as OUTPUT
@@ -27,7 +26,7 @@ void setup() {
 }
 
 void loop() {
-	lcdDisplay15("Hello World", 1100);
+	lcdDisplay15("test_message", 700);
 	delay(500);
 }
 
@@ -101,7 +100,7 @@ int findCharacterCode(char character) { //returns the code of the given characte
 
 void lcdDisplayMulti(int numbers[]) { //Displays 4 characters on the lcd
  
- int defaultSpeed = 2; //Screen speed in ms 
+ int defaultSpeed = 2; //Screen refresh speed in ms 
  
  for(byte i=0;i<4;i++) {
   lcdClear();
