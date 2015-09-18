@@ -1,0 +1,203 @@
+/*
+Displays a message on the connected arduino.
+©2015 Panos Mazarakis 
+Open-source - released under GNU Licence.
+https://github.com/panosmz/arduinoledtest
+*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+@font-face {
+    font-family: lcd;
+    src: url(lcd.TTF);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+body {
+    font-family: 'Share Tech Mono';
+    background-image: url(img/subtle_dots.png);
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #0066cc;
+}
+
+#app {
+    background-image: url(img/arduino_lcd.svg);
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error {
+    color: red;
+    background-color: rgba(0,0,0,0.8);
+    padding: 10px 0;
+    text-align: right;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+}
+
+.success {
+    color: lime;
+}
+
+
+header {
+    padding-left: 120px;
+    margin-top: 0;
+}
+
+header h1 {
+
+}
+
+header h1 a {
+    color: black;
+}
+
+header p {
+    padding-top: 10px;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+header ul li {
+    float: left;
+    display: block;
+}
+
+header ul li a {
+    width: 60px;
+}
+
+header ul li:last-child:before {
+    color: black;
+    content: "|";
+}
+
+#header-left {
+    float: left;
+    padding-top: 30px;
+}
+
+#header-right {
+    float: right;
+    padding-top: 75px;
+    padding-left: 40px;
+}
+
+
+#current-prev {
+    position: absolute;
+    padding-left: 120px;
+    margin-top: 280px;
+}
+
+#current-mess {
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 125px;
+    background-color: white;
+    border: 2px solid black;
+    width: 350px;
+    height: 50px;
+}
+
+#current-mess p {
+    padding: 5px 10px;
+}
+
+#current-text {
+    font-family: 'lcd';
+    position: absolute;
+    font-size: 75pt;
+    margin-top: 280px;
+    margin-left: 580px;
+    color: #00ff00;
+}
+
+#submit-text {
+    position: absolute;
+    margin-top: 560px;
+    margin-left: 580px;
+}
+
+
+#shout-app {
+    position: absolute;
+    margin-top: 590px;
+    margin-left: 580px;
+}
+
+#remaining-char {
+    display: inline;
+}
+
+#shouts {
+    margin-top: 20px;
+    width: 350px;
+    height: 160px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.shout-post-container {
+    display: block;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    height: 20px;
+}
+
+.shout-name {
+    display: inline;
+    float: left;
+    color: red;
+}
+
+.shout-post {
+    display: inline;
+    text-align: right;
+    color: green;
+}
+
+.shout-time {
+    display: inline;
+    float: right;
+    color: gray;
+    font-size: 9pt;
+}
+
+
+footer {
+    position: absolute;
+    margin-top: 830px;
+    width: 1200px;
+    padding-left: 120px;
+    border-top: 2px solid black;
+    padding: 9px 15px;
+}
+
+#register {
+    width: 600px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
