@@ -33,7 +33,7 @@ https://github.com/panosmz/arduinoledtest
             <header>
                 <div id="header-left">
                     <h1><a href="#">Arduino_App</a></h1>
-                    <p>A simple app, that displays the submitted text to a connected Arduino UNO.</p>
+                    <p>A simple app, that displays the submitted text to a connected Arduino UNO. <a href="vid/demo.mp4" target="_blank">Demo</a>.</p>
                 </div>
                 <div id="header-right">
                 <?php
